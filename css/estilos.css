@@ -1,0 +1,261 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;900&display=swap');
+
+@font-face {
+    font-family:'Jost', sans-serif;
+    src: url(../fonts/Jost-Italic-VariableFont_wght.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  color: #000000;
+  font-family:'Jost', sans-serif;
+}
+
+
+header{
+  display: block;
+  position: sticky;
+  background-color: rgb(255, 255, 255);
+}
+
+header ul{
+  display: flex;
+}
+header ul li{
+  list-style: none;
+  margin: 0px 10px;
+}
+header ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem ;
+  list-style: none;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.header_content{
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 1rem;
+  color: #000000;
+  text-decoration: none;
+
+}
+.header_content a{
+  color: #000000;
+  text-decoration: none;
+  padding: 4px 25px;
+  border-radius: 30px;
+}
+
+.favicon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: left;
+}
+
+.Main_header {
+  background-image: url(../img/galaxy/alienbursthead.png);
+  background-repeat: no-repeat;
+  height: 700px;
+  background-size: cover;
+  position: sticky;
+
+}
+
+.navBar {
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  text-align: right;
+  text-decoration: none;
+  list-style: none;
+  justify-content: left;
+}
+/*tipos*/
+
+h1{
+  color: #000000;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-size: 50px;
+}
+
+h2{
+  color: #000000;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+}
+h4{
+  color: #000000;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+}
+p{
+  color: black;
+  font-family:'Jost', sans-serif;
+  font-size: 25px;
+
+}
+ul li a {
+  color: hsl(0, 0%, 0%);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0px 20px;
+  text-decoration: none;
+}
+/*galeria*/
+
+.img_landscape{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  justify-items: center;
+}  
+.img_landscape img{
+  width: 500px;
+  height: 400px;
+}
+.img_portrait{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  justify-items: center;
+}  
+.img_portrait img {
+  width: 400px;
+  height: 400px;
+}
+.video_gallery {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1,1fr);
+  justify-items: center;
+  
+}
+.video_gallery iframe {
+  width: 560px; 
+  height: 315px;
+  
+}
+.one_image {
+display: grid;
+grid-template-columns: (1, 1fr);
+grid-template-rows: none;
+justify-items: center;
+}
+
+.one_image img {
+  width:550px;
+  height:550px;
+}
+
+/*contacto*/
+
+form {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  font-family:'Jost', sans-serif;
+  height: 550px;
+
+}
+  /*footer*/
+
+footer {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 3, 1fr;
+}
+  
+footer ul li {
+  display: inline;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0px 10px;
+  color: #000000;
+}
+
+
+/*media queries*/
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 576px){ 
+  header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Main_header img {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .img_portrait {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .img_landscape{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+  .video_gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.video_gallery iframe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+}
+  
