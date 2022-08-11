@@ -1,0 +1,21 @@
+{
+  "name": "thealienheads",
+  "version": "1.0.0",
+  "description": "Jost Variable Font ==================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass --include-path scss scss/style.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thealienheads/THEALIENHEADS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thealienheads/THEALIENHEADS/issues"
+  },
+  "homepage": "https://github.com/thealienheads/THEALIENHEADS#readme"
+}
