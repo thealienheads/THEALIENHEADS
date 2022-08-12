@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass --include-path scss scss/style.scss css/estilos.css",
+    "build-css": "node-sass --include-path scss sass/style.scss css/estilos.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/thealienheads/THEALIENHEADS/issues"
   },
-  "homepage": "https://github.com/thealienheads/THEALIENHEADS#readme"
+  "homepage": "https://github.com/thealienheads/THEALIENHEADS#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
 }
