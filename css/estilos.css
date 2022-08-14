@@ -1,10 +1,12 @@
 /*fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
 @font-face {
-  font-family: 'Jost', sans-serif;
-  src: url(../fonts/Jost-Italic-VariableFont_wght.ttf); }
+  font-family: 'Roboto Mono', monospace;
+  src: url(../fonts/static/RobotoMono-ExtraLight.ttf);
+}
+
+
 
 * {
   margin: 0;
@@ -13,7 +15,7 @@
 body {
   background-color: white;
   color: #000000;
-  font-family: "Jost", sans-serif; }
+  font-family: 'Roboto Mono', monospace; }
 
 .navbar .navbar-expand-lg {
   background-color: white;
@@ -31,28 +33,28 @@ body {
 h1 {
   color: #000000;
   text-align: center;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-size: 50px; }
 
 h2 {
   color: #000000;
   text-align: center;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-size: 30px; }
 
 h4 {
   color: #000000;
   text-align: center;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-style: 25px; }
 
 p {
   color: #000000;
   text-align: center;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-size: 20px;
   padding: 5rem;
@@ -129,7 +131,7 @@ form {
   color: #000000;
   display: flex;
   justify-content: right;
-  font-family: "Jost", sans-serif; }
+  font-family: 'Roboto Mono', monospace; }
 
 fieldset {
   padding: 15px 50px;

@@ -1,26 +1,32 @@
 /*fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+@import "index.scss"
+@import "./mediaQueries.scss"
 
 @font-face {
-    font-family:'Jost', sans-serif;
-    src: url(../fonts/Jost-Italic-VariableFont_wght.ttf);
+  font-family: 'Roboto Mono', monospace;
+  src: url(../fonts/static/RobotoMono-ExtraLight.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+$estilos: (
+  color: black,
+  fuente: 20px,
+  tipo: 'Roboto Mono', monospace;
+  fondo: white,
+)
 body {
-  background-color: white;
-  color: #000000;
-  font-family: "Jost", sans-serif;
+  background-color: map-get($estilos, $fondo);
+  font-family: 'Roboto Mono', monospace;
 }
 
 .navbar .navbar-expand-lg {
-  background-color: white;
-  color: black;
+  background-color: map-get($estilos, $fondo);
+  color: map-get($estilos, $fuente);
 }
 .collapse {
   flex-grow: initial;
@@ -36,30 +42,21 @@ body {
 h1 {
   color: #000000;
   text-align: center;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-size: 50px;
 }
 
 h2 {
-    color: #000000;
-    text-align: center;
-    font-family: "Jost", sans-serif;
-    font-style: normal;
+ @extend h1;
     font-size: 30px;
 }
 h4 {
-    color: #000000;
-    text-align: center;
-    font-family: "Jost", sans-serif;
-    font-style: normal;
+ @extend h1;
     font-style: 25px;
 }
 p {
-    color: #000000;
-    text-align: center;
-    font-family: "Jost", sans-serif;
-    font-style: normal;
+ @extend h1;
     font-size: 20px;
     padding: 5rem;
     padding-bottom: 2rem;
@@ -89,10 +86,7 @@ ul li a {
   height: 400px;
 }
 .img_portrait {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    display: grid;
+   @extend .img_landscape;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
@@ -116,9 +110,7 @@ ul li a {
 }
 
 .instagram-media {
-  display: flex;
-  flex-direction: column;
-  display: grid;
+ @extend .video_gallery;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   justify-items: center;
@@ -131,17 +123,20 @@ ul li a {
 }
 
 .one_image img {
-  width: 550px;
-  height: 550px;
+  @include img_size (550px, 550px)
+  
 }
-
+@mixin img_size {($height, $width)
+  height: $height;
+  width: $width;
+}
 /*contacto*/
 
 form {
   color: #000000;
   display: flex;
   justify-content: right;
-  font-family: "Jost", sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 fieldset {
   padding: 15px 50px;
@@ -206,73 +201,3 @@ i {
   font-size: 2rem;
 }
 
-/*media queries*/
-@media only screen and (max-width: 768px) {
-  header ul {
-    align-items: center;
-  }
-  .navBar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main_header {
-    display: flex;
-    justify-content: center;
-  }
-  .banner-index {
-    width: 100%;
-  }
-  .img_portrait {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .img_landscape {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-}
-@media only screen and (max-width: 576px) {
-  header ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navBar {
-    flex-direction: column;
-    align-items: center;
-  }
-  .Main_header img {
-    display: flex;
-    align-items: center;
-  }
-
-  .img_portrait {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-
-  .img_landscape {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    display: flex;
-  }
-  .video_gallery {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    iframe {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-      }
-  }
-  
-}
