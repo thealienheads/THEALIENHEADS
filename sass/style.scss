@@ -1,8 +1,8 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
-@import "index.scss"
-@import "./mediaQueries.scss"
+@import "index.scss";
+@import "./mediaQueries.scss";
 
 @font-face {
   font-family: 'Roboto Mono', monospace;
@@ -16,11 +16,12 @@
 $estilos: (
   color: black,
   fuente: 20px,
-  tipo: 'Roboto Mono', monospace;
+  tipo: 'Roboto Mono', monospace,
   fondo: white,
-)
+);
+
 body {
-  background-color: map-get($estilos, $fondo);
+  background-color: map-get(estilos, fondo);
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -126,10 +127,11 @@ ul li a {
   @include img_size (550px, 550px)
   
 }
-@mixin img_size {($height, $width)
-  height: $height;
-  width: $width;
+@mixin img_size { (height, width),
+  width: $width,
+  height: $height,
 }
+
 /*contacto*/
 
 form {
