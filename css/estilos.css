@@ -65,7 +65,7 @@ ul li a {
   color: black;
   font-size: 25px;
   font-weight: bold;
-  margin: 0px 20px;
+  margin: 0px 0px;
   text-decoration: none; }
 
 /*galeria*/
@@ -181,8 +181,6 @@ footer {
   footer ul li {
     display: inline;
     font-size: 15px;
-    font-weight: bolder;
-    margin: 0px 10px;
     color: #000000; }
 
 i {
